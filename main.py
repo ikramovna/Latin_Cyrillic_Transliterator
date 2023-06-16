@@ -7,8 +7,8 @@ bot = telebot.TeleBot(TOKEN, parse_mode=None)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    answer = 'Hello, Welcome👋'
-    answer += '\nEnter text'
+    answer = f'Hi👋!\t{message.from_user.full_name} Welcome Cyrillic_Latin Transliterator'
+    answer += '\n Enter your text'
     bot.reply_to(message, answer)
 
 
